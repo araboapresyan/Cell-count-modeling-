@@ -3,7 +3,7 @@ library(ggplot2)
 library(dplyr)
 library(ggpubr)
 
-### Funcion for simulation ###
+## Funcion for simulation ##
 
 #str.cell.n - starting cell number
 #ittr - number of itterations(how many times to repeat)
@@ -251,7 +251,9 @@ cell.numb_t <- as.data.frame(cell.numb_t)
 cell.numb_t <- data.frame(count = cell.numb_t$V1,name = rownames(cell.numb_t))
 
 # calculating proportions
+#control
 vvet_c <- cell.numb_c$count/(cell.numb_c$count + cell.numb_t$count)
+#TBI
 vvet_t <- cell.numb_t$count/(cell.numb_c$count + cell.numb_t$count)
 
 cell.numb <- data.frame(exp = c(rep("Sham",times = 13),rep("TBI",times = 13)),
